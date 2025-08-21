@@ -6,9 +6,9 @@ import BuyCredit from './pages/BuyCredit'
 const App = () => {
   return (
     <div>
-      <Home />
-      <Result />
-      <BuyCredit />
+      <Home/>
+      <Result/>
+      <BuyCredit/>
     </div>
   )
 }
