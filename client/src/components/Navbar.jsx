@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 const Navbar = () => {
     const [user,setUser]=useState(null);
   return (
-    <div >
+    <div className='flex justify-between items-center py-4'>
         <Link to='/'>
         <img src={assets.logo} alt="" className='w-28 sm:w-32 lg:w-40'/>
         </Link>
