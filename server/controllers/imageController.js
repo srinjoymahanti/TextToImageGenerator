@@ -14,7 +14,7 @@ const generateImage = async (req, res) => {
       return res.json({
         success: false,
         message: "No credit balance",
-        creditBalance: user.creditBalance,
+        creditBalance: user.creditBalance - 1,
       });
     }
 
@@ -36,13 +36,13 @@ const generateImage = async (req, res) => {
     const resultImage = `data:image/png;base64,${base64Image}`;
 
     await userModel.findByIdAndUpdate(user._id, {
-      creditBalance: user.creditBalance - 1,
+      creditBalance: user.creditBalance -1,
     });
 
     res.json({
       success: true,
       message: "Image generated",
-      creditBalance: user.creditBalance - 1,
+      creditBalance: user.creditBalance -1,
       resultImage,
     });
   } catch (error) {
