@@ -22,7 +22,7 @@ const Navbar = () => {
             >
               <img src={assets.credit_star} className="w-5" />
               <p className="text-xs sm:text-sm font-md text-gray-600">
-                Credits left : {credit}
+                Credit left : {credit}
               </p>
             </button>
             <p className="text-gray-600 max-sm:hidden pl-4">Hi, {user.name}</p>
@@ -38,7 +38,7 @@ const Navbar = () => {
         ) : (
           <div className="flex items-center gap-2 sm:gap-5">
             <p className="cursor-pointer" onClick={() => navigate("/buy")}>
-              Pricing
+              Primium Plans
             </p>
             <button
               onClick={() => setShowLogin(true)}
